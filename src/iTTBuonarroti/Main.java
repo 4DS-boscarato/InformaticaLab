@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        iTTBuonarroti.Classe classe1 = null;
-        Studente capoclasse = null;
+        Classe classe1 = null;
+        Studente capoClasse = null;
         int lunghezza = 0;
 
         System.out.print("\nInserire la lunghezza dell'array: ");
@@ -25,25 +25,24 @@ public class Main {
                     System.out.print("\nInserire il nome dello studente: ");
                     input = new Scanner(System.in);
                     String nome = input.nextLine();
-                    arrayStudenti[i].setNome(nome);
 
                     System.out.print("\nInserire il cognome dello studente: ");
                     input = new Scanner(System.in);
                     String cognome = input.nextLine();
-                    arrayStudenti[i].setNome(cognome);
+
+                    arrayStudenti[i] = new Studente(nome, cognome);
                 }
 
                 System.out.print("\nInserire il nome dello studente che fara` da capo classe: ");
                 input = new Scanner(System.in);
                 String nome = input.nextLine();
-                capoclasse.setNome(nome);
 
                 System.out.print("\nInserire il cognome dello studente che fara` da capo classe: ");
                 input = new Scanner(System.in);
                 String cognome = input.nextLine();
-                capoclasse.setCognome(cognome);
 
-                classe1 = new Classe(capoclasse, arrayStudenti);
+                capoClasse = new Studente(nome, cognome);
+                classe1 = new Classe(capoClasse, arrayStudenti);
                 checkArray = true;
             }
             catch (InputMismatchException e) {
