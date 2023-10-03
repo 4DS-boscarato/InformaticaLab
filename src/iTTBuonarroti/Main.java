@@ -1,15 +1,14 @@
 package iTTBuonarroti;
 
-
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        Classe classe1 = null;
+        iTTBuonarroti.Classe classe1 = null;
         Studente capoclasse = null;
         int lunghezza = 0;
 
@@ -42,7 +41,7 @@ public class Main {
                 System.out.print("\nInserire il cognome dello studente che fara` da capo classe: ");
                 input = new Scanner(System.in);
                 String cognome = input.nextLine();
-                capoclasse.setNome(cognome);
+                capoclasse.setCognome(cognome);
 
                 classe1 = new Classe(capoclasse, arrayStudenti);
                 checkArray = true;
@@ -54,7 +53,6 @@ public class Main {
                 System.out.println("\nNon va bene: " + e.getMessage());
             }
         }while(!checkArray);
-
 
 
         System.out.println("La classe al momento attuale e`: " + Arrays.toString(arrayStudenti));

@@ -1,27 +1,29 @@
 package iTTBuonarroti;
 
+
 import java.util.Arrays;
 
-public class Classe{
+public class Classe {
     private Studente capoClasse;
     private Studente[] studenti;
 
-    public Classe(Studente capo, Studente[] stud){
+    public Classe(Studente capo, Studente[] stud) throws Exception{
+        capoClasse = capo;
         studenti = new Studente[stud.length];
         for(int i = 0; i < stud.length; i++){
             if(stud[i].getNome().length() <= 3 && stud[i].getCognome().length() <= 3){
-                if(stud[i].getNome().contains("/") && stud[i].getNome().contains("#") && stud[i].getNome().contains("*") && stud[i].getCognome().contains("/") && stud[i].getCognome().contains("#") && stud[i].getCognome().contains("*")){
+                if(stud[i].getNome().contains("/") && stud[i].getNome().contains("#") && stud[i].getNome().contains(" ") && stud[i].getCognome().contains("/") && stud[i].getCognome().contains("#") && stud[i].getCognome().contains(" ")){
                     stud[i].setNome(stud[i].getNome().substring(0,1).toUpperCase() + stud[i].getNome().substring(1));
                     stud[i].setCognome(stud[i].getCognome().substring(0,1).toUpperCase() + stud[i].getCognome().substring(1));
                     studenti[i] = new Studente(stud[i]);
                 }
                 else{
-                    studenti[i] = new Studente("null", "null");
+                    throw new Exception(" Sia il nome che il cognome non possono contenere questi caratteri '/' '*' '(spazio)'!");
                 }
 
             }
             else{
-                studenti[i] = new Studente("null", "null");
+                throw new Exception(" Sia il nome che il cognome devono essere più lunghi di 3 caratteri!");
             }
         }
     }
