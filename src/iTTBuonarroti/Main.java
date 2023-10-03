@@ -54,10 +54,15 @@ public class Main {
         }while(!checkArray);
 
 
-        System.out.println("La classe al momento attuale e`: " + Arrays.toString(arrayStudenti));
+        System.out.println("\nLa classe al momento attuale e`: " + Arrays.toString(arrayStudenti));
         System.out.println("Il capoclasse e`: " + classe1.getCapoClasse());
 
-        classe1.invertiAttributi();
-        System.out.println("\nLa classe sistemata e con nomi e cognomi invertitie`: " + classe1.toString());
+        try{
+            classe1.invertiAttributi();
+            System.out.println("\nLa classe sistemata e con nomi e cognomi invertitie`: " + classe1.toString());
+        }
+        catch (Exception e){
+            System.out.println("BOH:" + e.getMessage());
+        }
     }
 }
