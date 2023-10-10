@@ -12,7 +12,7 @@ public class Data{
             a = anno;
         }
         else{
-            throw new Exception(" Inserisci melgio i giorni della raccolta");
+            throw new Exception(" Inserisci meglio i giorni della raccolta");
         }
     }
 
