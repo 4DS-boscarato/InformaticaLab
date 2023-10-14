@@ -1,4 +1,4 @@
-package punto;
+package I3Punti;
 
 
 class PuntoColorato extends Punto{

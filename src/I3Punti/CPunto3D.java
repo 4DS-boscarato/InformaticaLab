@@ -1,4 +1,4 @@
-package punto;
+package I3Punti;
 
 
 class Punto3D extends Punto{
