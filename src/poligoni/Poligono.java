@@ -1,5 +1,4 @@
 package poligoni;
-
 class Poligono{
     private float l1;
     private float l2;
@@ -15,10 +14,6 @@ class Poligono{
 
     public float calcolaPerimetro(){
         return l1 + l2 + l3 + l4;
-    }
-
-    public double apotema(){
-        return 0.5/l1;
     }
 
     public void setL1(float newL1){
@@ -53,3 +48,8 @@ class Poligono{
         return l4;
     }
 }
+
+
+
+
+
