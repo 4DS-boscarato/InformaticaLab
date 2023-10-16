@@ -1,5 +1,7 @@
 package iTTBuonarroti;
 
+import java.util.regex.*;
+
 public class Studente {
     private String nome;
     private String cognome;
@@ -22,6 +24,20 @@ public class Studente {
         return cognome;
     }
 
+    private void checkString(String str) throws Exception {
+
+        String regex = "^[A-ZÀ-ÿ][a-zà-ÿ'\\s]*$";
+        str = str.trim(); //toglie spazi davanti e alla fine
+
+        if(!str.matches(regex)) {
+            throw new Exception("Nome o cognome non validi!");
+        }
+        if(str.contains("  ")) {
+            throw new Exception("Non puoi inserire più di 1 spazio dietro ad un altro!");
+        }
+    }
+
+/*
     private void checkString(String str) throws Exception {
         char[] strS = str.toCharArray();
         int nSpazi = 0;
@@ -51,6 +67,7 @@ public class Studente {
             throw new Exception(" Lettera prima Iniziale non valida!");
         }
     }
+*/
 
     public void setNome(String n) throws Exception{
         if(n == null){

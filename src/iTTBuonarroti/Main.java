@@ -58,7 +58,7 @@ public class Main {
         System.out.println("Il capoclasse e`: " + classe1.getCapoClasse());
 
         try{
-            classe1.invertiAttributi();
+            classe1.invertiNC();
             System.out.println("\nLa classe sistemata e con nomi e cognomi invertitie`: " + classe1.toString());
         }
         catch (Exception e){
