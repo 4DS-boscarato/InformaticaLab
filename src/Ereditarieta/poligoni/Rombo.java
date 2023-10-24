@@ -6,7 +6,7 @@ public class Rombo extends Poligono{
     private float dMagg;
     private float dMinn;
 
-    public Rombo(float newLungLato, float newDMagg, float newDMin){
+    public Rombo(float newLungLato, float newDMagg, float newDMin) throws Exception {
         super(newLungLato, 4);
         dMagg = newDMagg;
         dMinn = newDMin;

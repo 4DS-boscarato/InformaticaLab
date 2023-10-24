@@ -5,7 +5,7 @@ import java.lang.Math;
 
 public class Quadrato extends Poligono{
 
-    public Quadrato(float newLungLato){
+    public Quadrato(float newLungLato) throws Exception {
         super(newLungLato, 4);
     }
 

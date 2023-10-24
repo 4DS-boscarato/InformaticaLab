@@ -5,9 +5,9 @@ public class Poligono {
     private float lungLato;
     private int nLati;
 
-    public Poligono(float newLungLato, int newNLati) {
-        lungLato = newLungLato;
-        nLati = newNLati;
+    public Poligono(float newLungLato, int newNLati) throws Exception {
+        setLungLato(newLungLato);
+        setnLati(newNLati);
     }
 
     public float calcolaPerimetro() {
@@ -22,11 +22,17 @@ public class Poligono {
         return nLati;
     }
 
-    public void setLungLato(float newLungLato) {
+    public void setLungLato(float newLungLato) throws Exception {
+        if(newLungLato <= 0) {
+            throw new Exception(" Lato minore di 0");
+        }
         lungLato = newLungLato;
     }
 
-    public void setnLati(int newNLati) {
+    public void setnLati(int newNLati) throws Exception {
+        if(newNLati <= 2){
+            throw new Exception(" Lato minore di 0");
+        }
         nLati = newNLati;
     }
 

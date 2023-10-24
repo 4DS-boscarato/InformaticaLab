@@ -4,7 +4,7 @@ package Ereditarieta.poligoni;
 public class Esagono extends Poligono{
 
 
-    public Esagono(float newLungLato){
+    public Esagono(float newLungLato) throws Exception {
         super(newLungLato, 6);
     }
 

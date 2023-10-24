@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
 
         int lato;
@@ -67,7 +67,7 @@ public class Main {
 
         System.out.println("Perimetro quadrato: "+ gP1.perimetroInI(0));
         System.out.println("Perimetro esagono: "+ gP1.perimetroInI(1));
+        System.out.println("Perimetro rombo: "+ gP1.perimetroInI(2));
 
-        System.out.println("Area quadrato: "+ gP1.perimetroInI(0));
     }
 }
