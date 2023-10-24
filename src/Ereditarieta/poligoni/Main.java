@@ -40,12 +40,30 @@ public class Main {
         Quadrato q1 = new Quadrato(lato);
         gP1.inser(q1);
 
+
         System.out.print("\nInserisci Lunghezza lato dell'esagono:  ");
         input = new Scanner(System.in);
         lato = input.nextInt();
 
         Esagono e1 = new Esagono(lato);
         gP1.inser(e1);
+
+
+        System.out.print("\nInserisci Lunghezza lato del rombo:  ");
+        input = new Scanner(System.in);
+        lato = input.nextInt();
+
+        System.out.print("\nInserisci Lunghezza della diagonale maggiore:  ");
+        input = new Scanner(System.in);
+        float dMagg = input.nextFloat();
+
+        System.out.print("\nInserisci Lunghezza della diagonale minore:  ");
+        input = new Scanner(System.in);
+        float dMinn = input.nextFloat();
+
+        Rombo r1 = new Rombo(lato, dMagg, dMinn);
+        gP1.inser(q1);
+
 
         System.out.println("Perimetro quadrato: "+ gP1.perimetroInI(0));
         System.out.println("Perimetro esagono: "+ gP1.perimetroInI(1));

@@ -28,7 +28,6 @@ public class GestionePoligono{
         return poligoni[i].calcolaPerimetro();
     }
 
-
     public String toString() {
         return "GestionePoligono: " + "\npoligoni = " + Arrays.toString(poligoni) + ", \nnPoligoni =" + nPoligoni;
     }
