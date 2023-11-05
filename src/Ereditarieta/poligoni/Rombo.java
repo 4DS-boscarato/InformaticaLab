@@ -6,10 +6,10 @@ public class Rombo extends Poligono{
     private float dMagg;
     private float dMinn;
 
-    public Rombo(float newLungLato, float newB, float newA){
+    public Rombo(float newLungLato, float newDMagg, float newDMin) throws Exception {
         super(newLungLato, 4);
-        dMagg = newB;
-        dMinn = newA;
+        dMagg = newDMagg;
+        dMinn = newDMin;
     }
 
     public double apotema(){

@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class GestionePoligono{
     private Poligono[] poligoni;
     private int nPoligoni;
+    private static Integer nIst = 0;
 
     public GestionePoligono(int lung) throws Exception {
         if(lung <= 0){
@@ -13,6 +14,7 @@ public class GestionePoligono{
         }
         poligoni = new Poligono[lung];
         nPoligoni = 0;
+        nIst++;
     }
 
     public void inser(Poligono poligono){
@@ -28,8 +30,7 @@ public class GestionePoligono{
         return poligoni[i].calcolaPerimetro();
     }
 
-
     public String toString() {
-        return "GestionePoligono: " + "\npoligoni = " + Arrays.toString(poligoni) + ", \nnPoligoni =" + nPoligoni;
+        return "GestionePoligono: " + "\npoligoni = " + Arrays.toString(poligoni) + ", \nnumero poligoni: " + nPoligoni + ",\nnumero istanze: " + nIst;
     }
 }
