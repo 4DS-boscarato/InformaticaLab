@@ -20,4 +20,5 @@ public class Quadrato extends Poligono{
     public double area(){
         return getLungLato() * getLungLato();
     }
+
 }
