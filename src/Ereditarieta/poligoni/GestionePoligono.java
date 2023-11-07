@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class GestionePoligono{
     private Poligono[] poligoni;
     private int nPoligoni;
-    private static Integer nIst = 0;
+    private static int nIst;
 
     public GestionePoligono(int lung) throws Exception {
         if(lung <= 0){
@@ -24,10 +24,6 @@ public class GestionePoligono{
         if(nPoligoni == poligoni.length){
             poligoni = Arrays.copyOf(poligoni, poligoni.length * 2);
         }
-    }
-
-    public float perimetroInI(int i){
-        return poligoni[i].calcolaPerimetro();
     }
 
     public String toString() {

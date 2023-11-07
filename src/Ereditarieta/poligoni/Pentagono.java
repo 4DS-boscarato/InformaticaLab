@@ -17,7 +17,15 @@ public class Pentagono extends Poligono{
         return 0.68819/getLungLato();
     }
 
-    public double area(){
-        return Math.pow(getLungLato(), 2) * 1.72;
+    public float area(){
+        return (float) (Math.pow(getLungLato(), 2) * 1.72);
+    }
+
+    public StringBuilder disegno(char carattere) {
+        return null;
+    }
+
+    public String toString() {
+        return "Pentagono " + super.toString();
     }
 }

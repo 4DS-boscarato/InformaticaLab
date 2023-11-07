@@ -1,7 +1,7 @@
 package Ereditarieta.poligoni;
 
 
-public class Poligono {
+public abstract class Poligono {
     private float lungLato;
     private int nLati;
 
@@ -13,6 +13,9 @@ public class Poligono {
     public float calcolaPerimetro() {
         return lungLato * nLati;
     }
+
+    abstract public float area();
+    abstract public StringBuilder disegno(char carattere);
 
     public float getLungLato() {
         return lungLato;
@@ -37,7 +40,7 @@ public class Poligono {
     }
 
     public String toString(){
-        return "Lunghezza Lato: " + lungLato + " Numero Lati: " + nLati;
+        return "Lunghezza Lato: " + lungLato + "\nNumero Lati: " + nLati;
     }
 }
 
