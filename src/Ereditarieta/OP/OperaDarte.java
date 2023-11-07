@@ -6,8 +6,10 @@ public abstract class OperaDarte {
     protected String artista;
 
     public OperaDarte(String tit, String art) throws Exception {
-        setTitolo(tit);
-        setArtista(art);
+        checkString(tit);
+        checkString(art);
+        titolo = tit;
+        artista = art;
     }
 
     public abstract float printIngombro();
@@ -21,25 +23,13 @@ public abstract class OperaDarte {
         return artista;
     }
 
-
-    public void setTitolo(String titolo) throws Exception {
-        if(titolo == null){
+    private void checkString(String str) throws Exception {
+        if(str == null){
             throw new Exception(" Nella stringa passa si trova null!");
         }
-        if(titolo.equals("")){
+        if(str.equals("")){
             throw new Exception(" Nella stringa passata non c'è nulla!");
         }
-        this.titolo = titolo;
-    }
-
-    public void setArtista(String artista) throws Exception {
-        if(artista == null){
-            throw new Exception(" Nella stringa passa si trova null!");
-        }
-        if(artista.equals("")){
-            throw new Exception(" Nella stringa passata non c'è nulla!");
-        }
-        this.artista = artista;
     }
 
     public String toString(){
