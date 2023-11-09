@@ -5,16 +5,17 @@ import java.util.Arrays;
 public class Collezione {
     private String nome;
     private String luogo;
-    private OperaDarte[] opere;
-    private int numOpere;
+    private static OperaDarte[] opere;
+    private static int numOpere;
 
-    public Collezione(String nomeColl, String luog) throws Exception{
+    public Collezione(String nomeColl, String luog, int lung) throws Exception{
         setNome(nomeColl);
         setLuogo(luog);
+        opere = new OperaDarte[lung];
     }
 
     public void inser(OperaDarte oP){
-        opere[numOpere] = oP;
+        opere[numOpere] = ;
         numOpere++;
 
         if(numOpere == opere.length){
@@ -33,6 +34,14 @@ public class Collezione {
 
     public String getLuogo() {
         return luogo;
+    }
+
+    public static OperaDarte[] getOpere(){
+        return opere;
+    }
+
+    public static int getNumOpere(){
+        return numOpere;
     }
 
 
