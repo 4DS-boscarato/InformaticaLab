@@ -5,7 +5,7 @@ public class Quadro extends OperaDarte {
     private double altezza;
     private double larghezza;
 
-    public Quadro(String tit, String art, float alt, float larg) throws Exception {
+    public Quadro(String tit, String art, double alt, double larg) throws Exception {
         super(tit, art);
         altezza = alt;
         larghezza = larg;

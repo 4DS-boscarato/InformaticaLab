@@ -15,12 +15,15 @@ public abstract class OperaDarte {
     public abstract double printIngombro();
 
     public boolean equals(OperaDarte oP){
-        OperaDarte[] ope1 = Collezione.getOpere();
+        OperaDarte[] copiaOpere = Collezione.getOpere();
 
-        for(int i = 0; i < Collezione.getNumOpere() ;i++){
-
-            if()
+        for(int i = 0; i < copiaOpere.length ;i++){
+            if(oP == copiaOpere[i]){
+                return false;
+                // copiaOpere[i].getArtista().equals(oP.getArtista())){
+            }
         }
+        return true;
     }
 
     public String getTitolo() {

@@ -5,7 +5,7 @@ public class Scultura extends OperaDarte {
     private double larghezza;
     private double profondita;
 
-    public Scultura(String tit, String art, float alt, float larg, float prof) throws Exception {
+    public Scultura(String tit, String art, double alt, double larg, double prof) throws Exception {
         super(tit, art);
         altezza = alt;
         larghezza = larg;

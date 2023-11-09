@@ -6,7 +6,7 @@ public class Collezione {
     private String nome;
     private String luogo;
     private static OperaDarte[] opere;
-    private static int numOpere;
+    private int numOpere;
 
     public Collezione(String nomeColl, String luog, int lung) throws Exception{
         setNome(nomeColl);
@@ -15,7 +15,7 @@ public class Collezione {
     }
 
     public void inser(OperaDarte oP){
-        opere[numOpere] = ;
+        opere[numOpere] = oP;
         numOpere++;
 
         if(numOpere == opere.length){
@@ -38,10 +38,6 @@ public class Collezione {
 
     public static OperaDarte[] getOpere(){
         return opere;
-    }
-
-    public static int getNumOpere(){
-        return numOpere;
     }
 
 

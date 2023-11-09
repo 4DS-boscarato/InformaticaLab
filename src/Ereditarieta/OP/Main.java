@@ -12,7 +12,7 @@ public class Main {
 
         do{
             try{
-                System.out.print("Inserisci quanti poligoni vuoi inserire: ");
+                System.out.print("Inserisci quante opere vuoi inserire: ");
                 input = new Scanner(System.in);
                 int lung = input.nextInt();
 
@@ -27,32 +27,39 @@ public class Main {
             }
         }while(!check);
 
+        int scelta = 0;
 
         do {
             try {
-                int scelta = sceltaGenerale();
+                scelta = sceltaGenerale();
 
                 switch (scelta) {
                     case 1:
-                        System.out.println("Inserisci il titolo dell'opera:");
+                        System.out.println("\nInserisci il titolo dell'opera: ");
+                        input = new Scanner(System.in);
                         String titolo = input.nextLine();
 
-                        System.out.println("Inserisci il nome dell'artista:");
+                        System.out.println("Inserisci il nome dell'artista: ");
+                        input = new Scanner(System.in);
                         String artista = input.nextLine();
 
-                        System.out.println("Inserisci l'altezza:");
+                        System.out.println("Inserisci l'altezza: ");
+                        input = new Scanner(System.in);
                         double altezza = input.nextDouble();
 
-                        System.out.println("Inserisci la larghezza:");
+                        System.out.println("Inserisci la larghezza: ");
+                        input = new Scanner(System.in);
                         double larghezza = input.nextDouble();
 
                         OperaDarte opera;
                         if (sceltaOpera() == 1) {
                             opera = new Quadro(titolo, artista, altezza, larghezza);
-                        } else {
-                            System.out.println("Inserisci la profondità:");
-                            double profondita = scanner.nextDouble();
-                            scanner.nextLine(); // Consuma il carattere di nuova linea
+                        }
+                        else {
+                            System.out.println("\nInserisci la profondità: ");
+                            input = new Scanner(System.in);
+                            double profondita = input.nextDouble();
+
                             opera = new Scultura(titolo, artista, altezza, larghezza, profondita);
                         }
                         collezione.inser(opera);
@@ -70,21 +77,23 @@ public class Main {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } while (scelta != 2);
+        } while(scelta != 2);
     }
 
     private static int sceltaGenerale() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Scegli il tipo di opera:");
-        System.out.println("1. Quadro");
-        System.out.println("2. Scultura");
+        System.out.println("\nMenù");
+        System.out.println("1. Inserisci");
+        System.out.println("2. Esci");
+        System.out.print("Scelta: ");
         return input.nextInt();
     }
     private static int sceltaOpera() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Scegli il tipo di opera:");
+        System.out.println("\nScegli il tipo di opera:");
         System.out.println("1. Quadro");
         System.out.println("2. Scultura");
+        System.out.print("Scelta: ");
         return input.nextInt();
     }
 }
