@@ -22,9 +22,9 @@ public class Collezione {
         }
     }
 
-    //public float ingombroOperaData(OperaDarte oP){
-
-    //}
+    public double ingombroOperaData(OperaDarte oP){
+        return oP.printIngombro();
+    }
 
 
     public String getNome() {

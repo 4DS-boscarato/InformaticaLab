@@ -12,8 +12,7 @@ public abstract class OperaDarte {
         artista = art;
     }
 
-    public abstract float printIngombro();
-
+    public abstract double printIngombro();
 
     public String getTitolo() {
         return titolo;

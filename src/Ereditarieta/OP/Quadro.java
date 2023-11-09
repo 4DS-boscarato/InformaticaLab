@@ -2,8 +2,8 @@ package Ereditarieta.OP;
 
 public class Quadro extends OperaDarte {
 
-    private float altezza;
-    private float larghezza;
+    private double altezza;
+    private double larghezza;
 
     public Quadro(String tit, String art, float alt, float larg) throws Exception {
         super(tit, art);
@@ -11,15 +11,15 @@ public class Quadro extends OperaDarte {
         larghezza = larg;
     }
 
-    public float printIngombro(){
+    public double printIngombro(){
         return altezza * larghezza;
     }
 
-    public float getAltezza() {
+    public double getAltezza() {
         return altezza;
     }
 
-    public float getLarghezza() {
+    public double getLarghezza() {
         return larghezza;
     }
 

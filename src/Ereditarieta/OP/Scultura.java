@@ -1,9 +1,9 @@
 package Ereditarieta.OP;
 
 public class Scultura extends OperaDarte {
-    private float altezza;
-    private float larghezza;
-    private float profondita;
+    private double altezza;
+    private double larghezza;
+    private double profondita;
 
     public Scultura(String tit, String art, float alt, float larg, float prof) throws Exception {
         super(tit, art);
@@ -12,23 +12,23 @@ public class Scultura extends OperaDarte {
         profondita = prof;
     }
 
-    public float printIngombro(){
+    public double printIngombro(){
         return altezza * larghezza * profondita;
     }
 
-    public float getAltezza() {
+    public double getAltezza() {
         return altezza;
     }
 
-    public float getProfondita() {
+    public double getProfondita() {
         return profondita;
     }
 
-    public float getLarghezza() {
+    public double getLarghezza() {
         return larghezza;
     }
 
     public String toString(){
-        return super.toString() + " Altezza Scultura: " +  altezza + " Larghezza Scultura: " + larghezza + " Profondita Scultura: " + profondita
+        return super.toString() + " Altezza Scultura: " +  altezza + " Larghezza Scultura: " + larghezza + " Profondita Scultura: " + profondita;
     }
 }
