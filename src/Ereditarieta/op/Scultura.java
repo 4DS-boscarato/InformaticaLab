@@ -1,4 +1,4 @@
-package Ereditarieta.OP;
+package Ereditarieta.op;
 
 public class Scultura extends OperaDarte {
     private double altezza;
