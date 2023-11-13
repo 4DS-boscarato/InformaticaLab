@@ -14,7 +14,12 @@ public class Collezione {
         opere = new OperaDarte[lung];
     }
 
-    public void inser(OperaDarte oP){
+    public void inser(OperaDarte oP) throws Exception {
+        for(int i = 0; i < numOpere; ++i){
+            if(oP == opere[i]){
+                throw new Exception(" Quest'Opera e` gia` presente!");
+            }
+        }
         opere[numOpere] = oP;
         numOpere++;
 

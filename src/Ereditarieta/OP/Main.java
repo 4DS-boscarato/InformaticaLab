@@ -66,6 +66,22 @@ public class Main {
                         break;
 
                     case 2:
+                        System.out.println("\nInserire il numero dell'opera da selezionare: ");
+                        input = new Scanner(System.in);
+                        int sceltaOpera = input.nextInt();
+
+                        OperaDarte[] op = Collezione.getOpere();
+
+                        if(sceltaOpera <= op.length){
+                            System.out.println("L'ingombro dell'opera data e` " + collezione.ingombroOperaData(op[sceltaOpera]));
+                        }
+                        else{
+                            System.out.println("Non e` presente quest'Opera");
+                        }
+
+                        break;
+
+                    case 3:
                         System.out.println("Uscita dal programma.");
                         break;
 
@@ -84,7 +100,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("\nMenù");
         System.out.println("1. Inserisci");
-        System.out.println("2. Esci");
+        System.out.println("2. Ingombro Opera");
+        System.out.println("3. Esci");
         System.out.print("Scelta: ");
         return input.nextInt();
     }

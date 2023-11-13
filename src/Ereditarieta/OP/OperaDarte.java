@@ -20,7 +20,6 @@ public abstract class OperaDarte {
         for(int i = 0; i < copiaOpere.length ;i++){
             if(oP == copiaOpere[i]){
                 return false;
-                // copiaOpere[i].getArtista().equals(oP.getArtista())){
             }
         }
         return true;
