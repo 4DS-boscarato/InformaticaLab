@@ -1,4 +1,4 @@
-package Ereditarieta.op;
+package Ereditarieta.OP;
 
 public abstract class OperaDarte {
 
@@ -8,22 +8,22 @@ public abstract class OperaDarte {
     public OperaDarte(String tit, String art) throws Exception {
         checkString(tit);
         checkString(art);
-
         titolo = tit;
         artista = art;
     }
 
     public abstract double printIngombro();
 
-    public static boolean equals(OperaDarte oP){
+    public boolean equals(OperaDarte oP){
         OperaDarte[] copiaOpere = Collezione.getOpere();
 
         for(int i = 0; i < copiaOpere.length ;i++){
-            if(copiaOpere[i] == oP){
-                return true;
+            if(oP == copiaOpere[i]){
+                return false;
+                // copiaOpere[i].getArtista().equals(oP.getArtista())){
             }
         }
-        return false;
+        return true;
     }
 
     public String getTitolo() {

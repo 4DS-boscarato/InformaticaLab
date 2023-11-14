@@ -1,4 +1,4 @@
-package Ereditarieta.op;
+package Ereditarieta.OP;
 
 import java.util.Arrays;
 
@@ -9,16 +9,12 @@ public class Collezione {
     private int numOpere;
 
     public Collezione(String nomeColl, String luog, int lung) throws Exception{
-        checkString(nomeColl);
-        checkString(luog);
+        setNome(nomeColl);
+        setLuogo(luog);
         opere = new OperaDarte[lung];
     }
 
-    public void inser(OperaDarte oP) throws Exception {
-        if(OperaDarte.equals(oP)){
-            throw new Exception(" Quest'Opera e` gia` presente!");
-        }
-
+    public void inser(OperaDarte oP){
         opere[numOpere] = oP;
         numOpere++;
 
@@ -44,13 +40,24 @@ public class Collezione {
         return opere;
     }
 
-    private void checkString(String str) throws Exception {
-        if(str == null){
+
+    public void setNome(String nome) throws Exception {
+        if(nome == null){
             throw new Exception(" Nella stringa passa si trova null!");
         }
-        if(str.equals("")){
+        if(nome.equals("")){
             throw new Exception(" Nella stringa passata non c'è nulla!");
         }
+        this.nome = nome;
+    }
 
+    public void setLuogo(String luogo) throws Exception {
+        if(luogo == null){
+            throw new Exception(" Nella stringa passa si trova null!");
+        }
+        if(luogo.equals("")){
+            throw new Exception(" Nella stringa passata non c'è nulla!");
+        }
+        this.luogo = luogo;
     }
 }

@@ -1,4 +1,4 @@
-package Ereditarieta.op;
+package Ereditarieta.OP;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -28,7 +28,6 @@ public class Main {
         }while(!check);
 
         int scelta = 0;
-        int nAzioni = 0;
 
         do {
             try {
@@ -64,32 +63,9 @@ public class Main {
                             opera = new Scultura(titolo, artista, altezza, larghezza, profondita);
                         }
                         collezione.inser(opera);
-                        nAzioni++;
                         break;
 
                     case 2:
-                        if(nAzioni == 0) {
-                            System.out.println("\nNon puoi!");
-                            break;
-                        }
-                        System.out.println("\nInserire il numero dell'opera da selezionare: ");
-                        input = new Scanner(System.in);
-                        int sceltaOpera = input.nextInt();
-
-                        sceltaOpera -= 1;
-                        OperaDarte[] oP = Collezione.getOpere();
-
-                        if(sceltaOpera <= oP.length){
-                            System.out.println("L'ingombro dell'opera data e` " + collezione.ingombroOperaData(oP[sceltaOpera]));
-                        }
-                        else{
-                            System.out.println("Non e` presente quest'Opera");
-                        }
-
-                        nAzioni++;
-                        break;
-
-                    case 3:
                         System.out.println("Uscita dal programma.");
                         break;
 
@@ -101,15 +77,14 @@ public class Main {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } while(scelta != 3);
+        } while(scelta != 2);
     }
 
     private static int sceltaGenerale() {
         Scanner input = new Scanner(System.in);
         System.out.println("\nMenù");
         System.out.println("1. Inserisci");
-        System.out.println("2. Ingombro Opera");
-        System.out.println("3. Esci");
+        System.out.println("2. Esci");
         System.out.print("Scelta: ");
         return input.nextInt();
     }
@@ -122,6 +97,4 @@ public class Main {
         return input.nextInt();
     }
 }
-
-
 
