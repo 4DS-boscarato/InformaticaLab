@@ -1,4 +1,4 @@
-package Ereditarieta.OP;
+package Ereditarieta.op;
 
 public abstract class OperaDarte {
 
