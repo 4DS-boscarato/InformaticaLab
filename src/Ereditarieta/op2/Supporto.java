@@ -1,4 +1,4 @@
-package Ereditarieta.op2.op;
+package Ereditarieta.op2;
 
 public class Supporto {
     private double altezza;

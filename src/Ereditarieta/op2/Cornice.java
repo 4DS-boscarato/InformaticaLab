@@ -1,4 +1,4 @@
-package Ereditarieta.op2.op;
+package Ereditarieta.op2;
 
 public class Cornice {
     private double altezza;

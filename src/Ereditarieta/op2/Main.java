@@ -1,4 +1,4 @@
-package Ereditarieta.op2.op;
+package Ereditarieta.op2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
