@@ -14,7 +14,7 @@ public class Persona {
     private String codFisc;
     private String dataNascita;
     private String email;
-    private static int numeroIstanze;
+    protected static int numeroIstanze;
 
     public Persona(){
         numeroIstanze++;
