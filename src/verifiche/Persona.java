@@ -148,7 +148,7 @@ public class Persona {
             throw new Exception(" La data non è corretta!");
         }
 
-        switch (m) {
+        /*switch (m) {
             case 1, 3, 5, 7, 8, 10, 12 -> {
                 if (30 <= g) {
                     throw new Exception(" La data non è corretta!");
@@ -169,7 +169,7 @@ public class Persona {
 
                 }
             }
-        }
+        }*/
         dataNascita = data;
     }
 
