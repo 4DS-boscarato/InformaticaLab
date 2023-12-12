@@ -29,7 +29,7 @@ public class Auto implements Confrontabile{
     }
 
 
-    public Boolean confrontaMaggiore(Object obj) throws Exception{
+    public Boolean confrontaMaggiore(Confrontabile obj) throws Exception{
         if(!(obj instanceof Auto)){
             throw new Exception("Oggetto non appartenente alla classe Auto!");
         }
@@ -41,7 +41,7 @@ public class Auto implements Confrontabile{
     }
 
 
-    public Boolean confrontaMinore(Object obj) throws Exception{
+    public Boolean confrontaMinore(Confrontabile obj) throws Exception{
         if(!(obj instanceof Auto)){
             throw new Exception("Oggetto non appartenente alla classe Auto!");
         }
@@ -53,7 +53,7 @@ public class Auto implements Confrontabile{
     }
 
 
-    public Boolean confrontaUguale(Object obj) throws Exception{
+    public Boolean confrontaUguale(Confrontabile obj) throws Exception{
         if(!(obj instanceof Auto)){
             throw new Exception("Oggetto non appartenente alla classe Auto!");
         }
