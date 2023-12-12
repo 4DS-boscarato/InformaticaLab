@@ -4,7 +4,7 @@ public class Auto implements Confrontabile{
     private String modello;
     private Float velocita;
 
-    public Auto(Float peso, Float velocita)throws Exception{
+    public Auto(String modello, Float velocita)throws Exception{
         setPeso(modello);
         setVelocita(velocita);
     }
