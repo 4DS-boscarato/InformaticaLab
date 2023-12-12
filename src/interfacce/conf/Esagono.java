@@ -1,4 +1,4 @@
-package interfacce.confrontabile;
+package interfacce.conf;
 
 public class Esagono extends PoligonoRegolare {
     public Esagono(float lLati)throws Exception{

@@ -1,4 +1,4 @@
-package interfacce.confrontabile;
+package interfacce.conf;
 
 public class Quadrato extends PoligonoRegolare {
     public Quadrato(float lLati) throws Exception{

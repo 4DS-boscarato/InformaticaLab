@@ -1,4 +1,4 @@
-package interfacce.confrontabile;
+package interfacce.conf;
 
 public class Persona implements Confrontabile{
     private String nome;

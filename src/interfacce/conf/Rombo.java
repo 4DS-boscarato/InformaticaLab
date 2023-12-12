@@ -1,4 +1,4 @@
-package interfacce.confrontabile;
+package interfacce.conf;
 
 public class Rombo extends PoligonoRegolare {
     private float dMin;

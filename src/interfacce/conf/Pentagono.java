@@ -1,4 +1,4 @@
-package interfacce.confrontabile;
+package interfacce.conf;
 
 public class Pentagono extends PoligonoRegolare {
     public Pentagono(float lLati)throws Exception{

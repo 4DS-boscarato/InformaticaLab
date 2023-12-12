@@ -1,4 +1,4 @@
-package interfacce.confrontabile;
+package interfacce.conf;
 
 public abstract class PoligonoRegolare implements Confrontabile {
     private int nLati;
