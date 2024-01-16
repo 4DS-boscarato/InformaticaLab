@@ -25,7 +25,7 @@ public class StudenteObj extends Studente {
             getClasse().equals(((StudenteObj) oggetto).getClasse()) &&
             getRipetente().equals(((StudenteObj) oggetto).getRipetente()) &&
             getDataDiNascita().equals(((StudenteObj) oggetto).getDataDiNascita())){
-                if(getVoti().equals(((StudenteObj) oggetto).getVoti()){
+                if(getVoti().equals(((StudenteObj) oggetto).getVoti())){
                     return true;
                 }
 
